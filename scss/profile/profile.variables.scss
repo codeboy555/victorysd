@@ -1,0 +1,10 @@
+// Profile
+$profile-image-border: 1px;
+$profile-pager-height: 25px;
+$profile-color: #FFFFFF;
+
+// Profile - User image
+$profile-user-image-ratio: 1 1;
+
+// Merge maps
+$pre-img-ratios: append($pre-img-ratios, $profile-user-image-ratio);
