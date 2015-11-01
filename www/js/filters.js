@@ -1,10 +1,10 @@
-angular.module('your_app_name.filters', [])
+angular.module('victorysd_mobile.filters', [])
 
-.filter('rawHtml', function($sce){
-  return function(val) {
-    return $sce.trustAsHtml(val);
-  };
-})
+    .filter('rawHtml', function ($sce) {
+        return function (val) {
+            return $sce.trustAsHtml(val);
+        };
+    })
 
 /**
  * Truncate Filter
@@ -12,22 +12,20 @@ angular.module('your_app_name.filters', [])
  * @Param length, default is 10
  * @Param end, default is "..."
  * @return string
- */
-.filter('truncate', function () {
-  return function (text, length, end) {
-    if (isNaN(length))
-        length = 10;
+ */.filter('truncate', function () {
+        return function (text, length, end) {
+            if (isNaN(length))
+                length = 10;
 
-    if (end === undefined)
-        end = "...";
+            if (end === undefined)
+                end = "...";
 
-    if (text.length <= length || text.length - end.length <= length) {
-        return text;
-    }
-    else {
-        return String(text).substring(0, length-end.length) + end;
-    }
-  };
-})
+            if (text.length <= length || text.length - end.length <= length) {
+                return text;
+            } else {
+                return String(text).substring(0, length - end.length) + end;
+            }
+        };
+    })
 
 ;

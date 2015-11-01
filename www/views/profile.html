@@ -1,192 +1,181 @@
 <ion-nav-view>
-	<!-- this is the background image -->
-	<div multi-bg="['img/background-img.jpeg']"></div>
+    <div multi-bg="['img/harbor-edited-portrait.jpg']"></div>
 </ion-nav-view>
 
 <ion-view class="profile-view">
-  <ion-content>
-    <div class="row profile-data">
-      <div class="col">
-        <ion-slide-box class="profile-slides" on-slide-changed="slideHasChanged($index)">
+    <ion-content>
+        <div class="row profile-data">
+            <div class="col">
+                <ion-slide-box class="profile-slides" on-slide-changed="slideHasChanged($index)">
 
-          <ion-slide>
-            <div class="row slide-content">
-              <div class="col col-top user-data">
-                <div class="row">
-                  <div class="col col-center col-75">
-                    <h2 class="user-name">Towhid Zaman</h2>
-                    <p class="user-resume">
-                      Serial Entrepreneur - Growth Hack Specialist
-                      <br/>Lives in Dhaka, <b>Bangladesh</b>
-                    </p>
-                  </div>
-                  <!-- We need a wrapper with width set for the preload image directive -->
-                  <!-- Using col-25 sets width, that will do the trick -->
-                  <div class="col col-center col-25">
-                    <pre-img ratio="_1_1" helper-class="square-image">
-                      <img class="user-image" ng-src="https://s3.amazonaws.com/uifaces/faces/twitter/towhidzaman/128.jpg" spinner-on-load>
-                  	</pre-img>
-                  </div>
-                </div>
-                <div class="row user-actions">
-                  <div class="col">
-                    <button class="button button-small button-block">
-                      Request
-                    </button>
-                  </div>
-                  <div class="col">
-                    <button class="button button-small button-block">
-                      Follow
-                    </button>
-                  </div>
-                  <div class="col">
-                    <button class="button button-small button-block">
-                      Message
-                    </button>
-                  </div>
-                </div>
-              </div>
+                    <ion-slide>
+                        <div class="slide-content">
+                            <div class="">
+                                <div class="" style="background-color: #000828;">
+                                    <!-- We need a wrapper with width set for the preload image directive -->
+                                    <!-- Using col-25 sets width, that will do the trick -->
+                                    <div class="">
+                                        <pre-img ratio="_1_1">
+                                            <img style="width:100%" ng-src="img/home-banner-1_6plus.jpg"
+                                                 spinner-on-load>
+                                        </pre-img>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </ion-slide>
+
+                    <ion-slide>
+                        <div class="row slide-content iam-new">
+                            <div class="col col-center user-data user-more-info">
+                                <p class="iam-new">
+
+                                </p>
+                            </div>
+                        </div>
+                    </ion-slide>
+
+                    <ion-slide>
+                        <div class="row slide-content">
+                                   <div class="col col-center user-data user-more-info">
+                                <p class="user-resume">
+                                    AAA
+                                </p>
+                            </div>
+                        </div>
+                    </ion-slide>
+
+                </ion-slide-box>
             </div>
-          </ion-slide>
-
-          <ion-slide>
-            <div class="row slide-content">
-              <div class="col col-center user-data user-more-info">
-                <p class="user-resume">
-                  <span>Serial Entrepreneur- Growth Hack Specialist - Conversion Rate Expert - Lead Gen Wiz @YellowBearMedia @AdaptiveDomains #PPC #seoexpert #Entrepreneur</span>
-                </p>
-                <br/>
-                <p class="user-resume">
-                  <b>1,986</b> Loops
-                </p>
-              </div>
-            </div>
-          </ion-slide>
-        </ion-slide-box>
-      </div>
-    </div>
-
-    <div class="row user-related-content">
-      <ion-scroll direction="x" class="col wide-as-needed">
-        <div class="row card-scroller">
-
-          <div class="col col-50 card-outer">
-            <div class="card">
-              <div class="row author-image">
-                <div class="pre-autor-image">
-                  <pre-img ratio="_1_1">
-                    <img class="card-user-image" ng-src="http://lorempixel.com/100/100/people/?p=1" spinner-on-load>
-                  </pre-img>
-                </div>
-              </div>
-              <div class="row author-name">
-                Leticia Gonzalez
-              </div>
-              <div class="row card-description-text only-text-card">
-                <div class="item-text-wrap">
-                  {{"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took."|truncate:160}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col col-50 card-outer">
-            <div class="card">
-              <div class="row author-image">
-                <div class="pre-autor-image">
-                  <pre-img ratio="_1_1">
-                    <img ng-src="http://lorempixel.com/100/100/people/?p=2" spinner-on-load>
-                  </pre-img>
-                </div>
-              </div>
-              <div class="row author-name">
-                Sam Kal
-              </div>
-              <div class="row card-description-text">
-                <div class="item-text-wrap">
-                  {{"This is a basic Card which contains an image."|truncate:45}}
-                </div>
-              </div>
-              <div class="row card-description-image">
-                <div class="image-wrapper">
-                  <img ng-src="http://lorempixel.com/300/300/?p=8">
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col col-50 card-outer">
-            <div class="card">
-              <div class="row author-image">
-                <div class="pre-autor-image">
-                  <pre-img ratio="_1_1">
-                    <img ng-src="http://lorempixel.com/100/100/people/?p=3" spinner-on-load>
-                  </pre-img>
-                </div>
-              </div>
-              <div class="row author-name">
-                Pepita Gonzalez
-              </div>
-              <div class="row card-description-text">
-                <div class="item-text-wrap">
-                  {{"This is a basic Card which contains an image and is my favourite."|truncate:60}}
-                </div>
-              </div>
-              <div class="row card-description-image">
-                <div class="image-wrapper">
-                  <img ng-src="http://lorempixel.com/300/300/?p=1">
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col col-50 card-outer">
-            <div class="card">
-              <div class="row author-image">
-                <div class="pre-autor-image">
-                  <pre-img ratio="_1_1">
-                    <img class="card-user-image" ng-src="http://lorempixel.com/100/100/people/?p=5" spinner-on-load>
-                  </pre-img>
-                </div>
-              </div>
-              <div class="row author-name">
-                Agustin Haller
-              </div>
-              <div class="row card-description-text only-text-card">
-                <div class="item-text-wrap">
-                  {{"This is a basic Card which contains an image and Lorem Ipsum is simply. This is a basic Card which contains an image and Lorem Ipsum is simply."|truncate:150}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col col-50 card-outer">
-            <div class="card">
-              <div class="row author-image">
-                <div class="pre-autor-image">
-                  <pre-img ratio="_1_1">
-                    <img ng-src="http://lorempixel.com/100/100/people/?p=9" spinner-on-load>
-                  </pre-img>
-                </div>
-              </div>
-              <div class="row author-name">
-                Josh Merrel
-              </div>
-              <div class="row card-description-text">
-                <div class="item-text-wrap">
-                  {{"This is a basic Card which contains an image."|truncate:45}}
-                </div>
-              </div>
-              <div class="row card-description-image">
-                <div class="image-wrapper">
-                  <img ng-src="http://lorempixel.com/300/300/?p=2">
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
-      </ion-scroll>
-    </div>
-  </ion-content>
+
+        <div class="row user-related-content">
+            <ion-scroll direction="x" class="col wide-as-needed">
+                <div class="row card-scroller">
+
+                    <div class="col col-50 card-outer">
+                        <div class="card">
+                            <div class="row author-image">
+                                <div class="pre-autor-image">
+                                    <pre-img ratio="_1_1">
+                                        <img class="card-user-image" ng-src=""
+                                             spinner-on-load>
+                                    </pre-img>
+                                </div>
+                            </div>
+                            <div class="row author-name">
+                                Leticia Gonzalez
+                            </div>
+                            <div class="row card-description-text only-text-card">
+                                <div class="item-text-wrap">
+                                    {{"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                    unknown printer took."|truncate:160}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col col-50 card-outer">
+                        <div class="card">
+                            <div class="row author-image">
+                                <div class="pre-autor-image">
+                                    <pre-img ratio="_1_1">
+                                        <img ng-src="" spinner-on-load>
+                                    </pre-img>
+                                </div>
+                            </div>
+                            <div class="row author-name">
+                                Sam Kal
+                            </div>
+                            <div class="row card-description-text">
+                                <div class="item-text-wrap">
+                                    {{"This is a basic Card which contains an image."|truncate:45}}
+                                </div>
+                            </div>
+                            <div class="row card-description-image">
+                                <div class="image-wrapper">
+                                    <img ng-src="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col col-50 card-outer">
+                        <div class="card">
+                            <div class="row author-image">
+                                <div class="pre-autor-image">
+                                    <pre-img ratio="_1_1">
+                                        <img ng-src="" spinner-on-load>
+                                    </pre-img>
+                                </div>
+                            </div>
+                            <div class="row author-name">
+                                Pepita Gonzalez
+                            </div>
+                            <div class="row card-description-text">
+                                <div class="item-text-wrap">
+                                    {{"This is a basic Card which contains an image and is my favourite."|truncate:60}}
+                                </div>
+                            </div>
+                            <div class="row card-description-image">
+                                <div class="image-wrapper">
+                                    <img ng-src="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col col-50 card-outer">
+                        <div class="card">
+                            <div class="row author-image">
+                                <div class="pre-autor-image">
+                                    <pre-img ratio="_1_1">
+                                        <img class="card-user-image" ng-src=""
+                                             spinner-on-load>
+                                    </pre-img>
+                                </div>
+                            </div>
+                            <div class="row author-name">
+                                Agustin Haller
+                            </div>
+                            <div class="row card-description-text only-text-card">
+                                <div class="item-text-wrap">
+                                    {{"This is a basic Card which contains an image and Lorem Ipsum is simply. This is a
+                                    basic Card which contains an image and Lorem Ipsum is simply."|truncate:150}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col col-50 card-outer">
+                        <div class="card">
+                            <div class="row author-image">
+                                <div class="pre-autor-image">
+                                    <pre-img ratio="_1_1">
+                                        <img ng-src="" spinner-on-load>
+                                    </pre-img>
+                                </div>
+                            </div>
+                            <div class="row author-name">
+                                Josh Merrel
+                            </div>
+                            <div class="row card-description-text">
+                                <div class="item-text-wrap">
+                                    {{"This is a basic Card which contains an image."|truncate:45}}
+                                </div>
+                            </div>
+                            <div class="row card-description-image">
+                                <div class="image-wrapper">
+                                    <img ng-src="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </ion-scroll>
+        </div>
+    </ion-content>
 </ion-view>
