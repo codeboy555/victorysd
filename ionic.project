@@ -1,6 +1,6 @@
 {
-  "name": "ionProfile-1",
-  "app_id": "",
+  "name": "VictorySD",
+  "app_id": "91704cb5",
   "gulpStartupTasks": [
     "default",
     "watch"

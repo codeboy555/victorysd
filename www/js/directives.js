@@ -10,6 +10,7 @@ angular.module('victorysd_mobile.directives', [])
                 this.hideSpinner = function () {
                     // Think i have to use apply because this function is not called from this controller ($scope)
                     $scope.$apply(function () {
+
                         $scope.loaded = true;
                     });
                 };
@@ -78,5 +79,43 @@ angular.module('victorysd_mobile.directives', [])
             }
         };
     })
+
+    .directive('vsdHome', function () {
+        return {
+            restrict: 'E', scope: {
+                obj1: '=', obj2: '@', obj3: '&'
+            }, link: function (scope, element, attr, $ionicSlideBoxDelegate) {
+                element.on('load', function () {
+                    // Set visibility: true + remove spinner overlay
+                    console.log("loaded vsdhome")
+                });
+
+                scope.gotoSlide = function (index) {
+                    scope.$parent.gotoSlide(index);
+                };
+
+            }, templateUrl: 'views/home.html', replace: false, transclude: true
+
+        };
+    })
+
+    .directive('vsdImNew', function () {
+        return {
+            restrict: 'E', scope: {
+                ngSrc: '@'
+            }, link: function (scope, element, $ionicFrostedDelegate) {
+                element.on('load', function () {
+                    // Set visibility: true + remove spinner overlay
+                    console.log("loaded imnew")
+                }
+
+
+
+
+                );
+            }, templateUrl: 'views/im-new.html', restrict: 'E', replace: false, transclude: true
+        };
+    })
+
 
 ;

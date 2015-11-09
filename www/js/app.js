@@ -3,7 +3,34 @@ angular.module('underscore', []).factory('_', function () {
 });
 
 
-angular.module('victorysd_mobile', ['ionic', 'victorysd_mobile.directives', 'victorysd_mobile.filters', 'victorysd_mobile.views', 'underscore'])
+angular.module('victorysd_mobile', ['ionic','ionic.contrib.frost', 'victorysd_mobile.directives', 'victorysd_mobile.filters', 'victorysd_mobile.views', 'underscore'])
+
+    .controller('DemoCtrl', ['$scope', '$ionicBackdrop', '$timeout', '$ionicScrollDelegate', '$ionicSlideBoxDelegate', '$ionicFrostedDelegate', function ($scope, $ionicBackdrop, $timeout, $ionicScrollDelegate, $ionicSlideBoxDelegate) {
+        "use strict";
+
+        $scope.contentChanged = function () {
+            $ionicFrostedDelegate.update();
+        };
+
+        $scope.slideBoxDelegate = $ionicSlideBoxDelegate;
+        $scope.action = function () {
+            $ionicBackdrop.retain();
+            $timeout(function () {
+                $ionicBackdrop.release();
+            }, 2000);
+        };
+
+
+        $scope.doSomething = function () {
+            console.log(new Date());
+            $ionicSlideBoxDelegate.slide(0);
+        };
+
+        $scope.gotoSlide = function (index) {
+            $ionicSlideBoxDelegate.slide(index);
+        };
+
+    }])
 
     .run(function ($ionicPlatform) {
         $ionicPlatform.ready(function () {
@@ -15,19 +42,11 @@ angular.module('victorysd_mobile', ['ionic', 'victorysd_mobile.directives', 'vic
             if (window.StatusBar) {
                 StatusBar.styleDefault();
             }
-        });
+    });
     })
 
 
     .config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
         //$ionicConfigProvider.views.maxCache(0);
         //console.log($ionicConfigProvider.views);
-        $stateProvider
-
-            .state('profile', {
-                url: '/profile', templateUrl: "views/profile.html"
-            });
-
-        // if none of the above states are matched, use this as the fallback
-        $urlRouterProvider.otherwise('/profile');
     });

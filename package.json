@@ -1,7 +1,7 @@
 {
-  "name": "ionProfile",
+  "name": "VictorySD",
   "version": "1.0.0",
-  "description": "ionProfile_1: Beautiful profile page theme, perfect to integrate to your Ionic Apps.",
+  "description": "Victory San Diego mobile app",
   "dependencies": {
     "async": "^1.4.0",
     "bower": "^1.3.3",
